@@ -756,8 +756,7 @@ img {
 }
 .form-box {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .form-input {
@@ -765,7 +764,6 @@ img {
 }
 
 .footer-email-field {
-  margin-top: 20px;
   padding: 15px 16px;
   width: 358px;
   height: 50px;
@@ -785,9 +783,10 @@ img {
   outline: 1px solid var(--accent);
 }
 
-.footer-label-field {
+.footer-title-field {
+  margin-bottom: 20px;
   font-weight: 700;
-  line-height: 1.14x;
+  line-height: 1.14;
   text-transform: uppercase;
 
   color: var(--white-colour);
@@ -916,7 +915,6 @@ img {
 
 .modal-label {
   display: inline-block;
-  margin-top: 10px;
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.17;
@@ -924,11 +922,13 @@ img {
 }
 
 .modal-label:first-child {
-  margin-top: 12px;
+  margin-top: 0px;
 }
 
 .modal-box {
   position: relative;
+
+  margin-bottom: 10px;
 }
 
 .modal-field {
@@ -950,12 +950,10 @@ img {
 
 .modal-field:focus {
   border: 1px solid var(--accent);
-  outline: 1 px solid var(--accent);
+  outline: 1px solid var(--accent);
 }
 
 .modal-field.comment {
-  padding: 12px 16px;
-
   margin-bottom: 20px;
   padding: 12px 16px;
   height: 120px;
@@ -979,6 +977,7 @@ img {
 .rules-label {
   display: flex;
   align-items: center;
+  justify-content: center;
 
   cursor: pointer;
 }
@@ -1004,16 +1003,18 @@ img {
   transition: fill var(--animation-time) var(--animation-function);
 }
 
-.input-check:checked + .rules-label span,
-.input-check:focus + .rules-label span {
+.input-check:checked + span {
   background-color: var(--accent);
   border: none;
 }
 
-.input-check:checked + .rules-label .icon-check,
-.input-check:focus + .rules-label .icon-check {
+.input-check:checked + .check-icon-box .icon-check {
   fill: var(--white-colour);
 }
+
+/* .input-check:checked + .check-icon-box {
+  border: 2px solid var(--accent);
+} */
 
 .rules-link {
   color: var(--accent);
